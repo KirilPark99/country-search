@@ -70,8 +70,25 @@ The separate signal-aware race test is in commit `0a9849b`, after the mandatory 
 
 ## Deployment and submission
 
-Keep the personal repository private and work in `country-search`; do not merge application files into `main` before review.
+Work in `country-search`; do not merge application files into `main` before review. The repository can be public.
 
-For a static host, use `npm ci && npm run build` as the build command and `dist` as the publish directory. Deployment must serve the built ES modules over HTTP(S), not `file://`.
+### GitHub Pages
+
+Prepare the separate `gh-pages` branch locally, then push both branches:
+
+```bash
+npm run deploy
+git push origin country-search gh-pages
+```
+
+`npm run deploy` checks lint, runs the tests, builds `dist`, and copies the built site into an independent `gh-pages` history. It does not push anything or switch your working branch. Repeating it updates the same branch and removes obsolete published files. The branch contains only the built site and `.nojekyll`, not the source code or workflows.
+
+After the first push, open **Settings → Pages** and select **Deploy from a branch → gh-pages → / (root)**, then click **Save**. Do not select the custom GitHub Actions source. Expected URL: `https://kirilpark99.github.io/country-search/`.
+
+For later updates, repeat the same two commands. If GitHub has changes to `gh-pages` that are not available locally, fetch them first with `git fetch origin gh-pages:gh-pages`; do not force-push.
+
+No custom workflow or additional npm dependency is used. A token that permits normal repository pushes does not need the additional `workflow` scope for this mechanism. Push only the two named branches, not `--all`: the local `backup/pages-workflow` branch preserves the rejected workflow commit and must not be published with the current token.
+
+For other static hosts, use `npm ci && npm run build` as the build command and `dist` as the publish directory. Deployment must serve the built ES modules over HTTP(S), not `file://`.
 
 Before submission, repeat the task's behavior checklist on the public deployment, including throttled and offline requests in DevTools. Open the PR from `country-search` into your own `main`, include the deployment, screenshot, TDD history, and DESIGN.md link, and leave the PR open and unmerged.

@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest run",
+    "deploy": "npm run lint && npm test && npm run build && sh scripts/prepare-pages.sh",
     "prepare": "husky"
   },
   "lint-staged": {
