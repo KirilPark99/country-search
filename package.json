@@ -7,7 +7,7 @@
     "build": "tsc && node --input-type=module -e \"import { copyFileSync } from 'node:fs'; copyFileSync('index.html', 'dist/index.html'); copyFileSync('styles.css', 'dist/styles.css');\"",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "test": "vitest run --passWithNoTests",
+    "test": "vitest run",
     "prepare": "husky"
   },
   "lint-staged": {
