@@ -3,8 +3,16 @@ export type Debounced<T extends unknown[]> = ((...args: T) => void) & {
 };
 
 export function debounce<T extends unknown[]>(
-  _callback: (...args: T) => void,
-  _delay: number,
+  callback: (...args: T) => void,
+  delay: number,
 ): Debounced<T> {
-  throw new Error('Not implemented');
+  let timer: ReturnType<typeof setTimeout> | undefined;
+
+  const run = (...args: T) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => callback(...args), delay);
+  };
+
+  run.cancel = () => clearTimeout(timer);
+  return run;
 }
