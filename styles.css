@@ -68,7 +68,7 @@ a:focus-visible {
 }
 .header-note {
   font-size: 13px;
-  color: #67796d;
+  color: #5d7059;
 }
 .hero {
   padding: 58px 0 35px;
@@ -129,11 +129,11 @@ h1 {
   font-size: 18px;
 }
 #country-search::placeholder {
-  color: #859080;
+  color: #5d7059;
 }
 .search-hint {
   margin: 10px 0 0;
-  color: #778471;
+  color: #5d7059;
   font-size: 12px;
 }
 .history {
@@ -147,7 +147,7 @@ h1 {
 }
 .history-label {
   font-size: 11px;
-  color: #71806c;
+  color: #5d7059;
   margin-right: 4px;
 }
 .history-button {
@@ -171,7 +171,7 @@ h1 {
   margin: 0 0 16px;
 }
 .status-panel {
-  color: #687a6b;
+  color: #5d7059;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -236,7 +236,7 @@ h1 {
 }
 .country-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 20px;
   margin-top: 20px;
 }
@@ -270,7 +270,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7a8773;
+  color: #5d7059;
   font-size: 13px;
 }
 .card-content {
@@ -283,7 +283,7 @@ h1 {
   letter-spacing: 1.5px;
   font-size: 10px;
   font-weight: 700;
-  color: #6c806b;
+  color: #5d7059;
 }
 .country-name {
   display: block;
@@ -299,7 +299,7 @@ h1 {
   gap: 16px;
   margin-top: 10px;
   font-size: 13px;
-  color: #75816f;
+  color: #5d7059;
 }
 .card-field strong {
   font-weight: 550;
@@ -323,7 +323,7 @@ h1 {
   justify-content: space-between;
   gap: 15px;
   font-size: 11px;
-  color: #73806b;
+  color: #5d7059;
 }
 .site-footer a {
   text-decoration-color: #b5c4ab;
@@ -380,7 +380,7 @@ body:has(dialog[open]) {
 .description {
   font-size: 14px;
   line-height: 1.7;
-  color: #6b7a64;
+  color: #5d7059;
   margin: 22px 0;
 }
 .detail-grid {
@@ -391,7 +391,7 @@ body:has(dialog[open]) {
   border-top: 1px solid #dce5d7;
 }
 .detail-grid dt {
-  color: #77836d;
+  color: #5d7059;
   font-size: 12px;
   margin-bottom: 8px;
 }
