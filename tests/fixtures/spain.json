@@ -1,0 +1,18 @@
+[
+  {
+    "area": 505992,
+    "name": "Spain",
+    "flag": "🇪🇸",
+    "flags": {
+      "png": "https://flagcdn.com/w320/es.png",
+      "svg": "https://flagcdn.com/es.svg"
+    },
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "borders": ["AND", "FRA", "GIB", "PRT", "MAR"],
+    "capital": "Madrid",
+    "languages": [{ "name": "Spanish", "nativeName": "Español" }],
+    "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }],
+    "population": 47351567
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "country-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node --input-type=module -e \"import { copyFileSync } from 'node:fs'; copyFileSync('index.html', 'dist/index.html'); copyFileSync('styles.css', 'dist/styles.css');\"",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "deploy": "npm run lint && npm test && npm run build && sh scripts/prepare-pages.sh",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{json,md,html,css}": "prettier --check",
+    ".prettierrc": "prettier --check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.1",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.0"
+  }
+}
